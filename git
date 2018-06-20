@@ -1,0 +1,2 @@
+def java = 'https://github.com/javahometech/my-app'
+git branch:'master',url: "${java}"

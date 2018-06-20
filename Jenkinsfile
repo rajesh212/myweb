@@ -1,12 +1,9 @@
-node{
-    stage('SCM CHECKOUT'){
-        def java = 'https://github.com/javahometech/my-app'
-        git branch:'master',url: "${java}"
+   node{
+    stage('GIT CHECKOUT'){
+         load 'git'
     }
-    def mhome = tool name: 'maven', type: 'maven'
     stage('MAVEN'){
-        sh "${mhome}/bin/mvn clean package"
-        sh 'mv target/myweb*.war target/myweb.war'
+        load 'maven'
     }
     stage('TOMCAT'){
          def tomcat_location = 'ec2-user@172.31.91.92:/opt/tomcat/webapps'

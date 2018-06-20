@@ -1,0 +1,3 @@
+def mhome = tool name: 'maven', type: 'maven'
+sh "${mhome}/bin/mvn clean package"
+sh 'mv target/myweb*.war target/myweb.war'
