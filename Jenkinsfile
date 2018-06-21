@@ -5,9 +5,9 @@ node{
     stage('maven'){
         load 'maven'
     }
-    stage('tomcat'){
+    stage('Tomcat Via ansible '){
           sshagent(['SLAVE']) {
-        load 'tomcat'
+        load 'tomcat_ansible'
     }
     }
 }
