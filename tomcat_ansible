@@ -1,2 +1,2 @@
-sh 'scp -i src/rajesh.pem StrictHostKeyChecking=no target/myweb.war ubuntu@172.31.31.81:/home/ubuntu/tomcat-ansible/roles/tomcat/files'
-sh 'ssh -i src/rajesh.pem StrictHostKeyChecking=no ubuntu@172.31.31.81 ansible-playbook /home/ubuntu/tomcat/ansible/site.yml
+sh 'scp -i src/rajesh.pem target/myweb.war ubuntu@172.31.31.81:/home/ubuntu/tomcat-ansible/roles/tomcat/files/'
+sh 'ssh -i src/rajesh.pem -o StrictHostKeyChecking=no ubuntu@172.31.31.81 ansible-playbook /home/ubuntu/tomcat/ansible/site.yml'
